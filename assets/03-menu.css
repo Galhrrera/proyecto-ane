@@ -1,0 +1,76 @@
+.menu-container h2{
+    height: 100px;
+    padding-top: 30px;
+    font-size: 30px;
+    margin-bottom: 150px;
+    text-align: center;
+    background-color: #5aa0f9;
+}
+
+.menu-container h2 a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    position: relative;
+    padding: 20px;
+}
+
+.nav-links li{
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 20px;
+    display: flex;
+}
+
+.nav-links li i{
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+}
+
+.active {
+    background: #5aa0f9;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+.nav-links li:hover ~ .active{
+    display: block;
+}
+
+.nav-links li:nth-child(1):hover ~ .active{
+    top: 8.5%;
+}
+
+.nav-links li:nth-child(2):hover ~ .active{
+    top: 26.5%;
+}
+
+.nav-links li:nth-child(3):hover ~ .active{
+    top: 44.8%;
+}
+
+.nav-links li:nth-child(4):hover ~ .active{
+    top: 63%;
+}
+
+.nav-links li:nth-child(5):hover ~ .active{
+    top: 81.4%;
+}
+
+
+
