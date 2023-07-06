@@ -26,6 +26,7 @@ app.layout = html.Div(className="main-container",
             children=[
                 html.H2(dcc.Link('Proyecto ANE', href='/')),
                 html.Ul([
+                    html.Li([html.I(className="fa-solid fa-timeline"),dcc.Link('Línea de tiempo', href='/linea-de-tiempo')]),
                     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Mediciones', href='/mediciones')]),
                     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Simulaciones', href='/simulaciones')]),
                     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe técnico', href='/informe-tecnico')]),
@@ -76,6 +77,11 @@ def display_content(pathname):
     elif pathname == '/archivos':
         return html.Div([
             html.H2('Archivos'),
+            # contenido
+        ])
+    elif pathname == '/linea-de-tiempo':
+        return html.Div([
+            html.H2('Línea de tiempo'),
             # contenido
         ])
     else:
