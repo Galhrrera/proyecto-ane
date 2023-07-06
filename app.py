@@ -10,6 +10,7 @@ from pages import informe_tecnico_page
 from pages import informe_legal_page
 from pages import informe_final_page
 from pages import archivos_page
+from pages import linea_de_tiempo_page
 
 
 external_scripts_dict = [
@@ -88,10 +89,11 @@ def display_content(pathname):
     elif pathname == '/archivos':
         return archivos_page.layout()
     elif pathname == '/linea-de-tiempo':
-        return html.Div([
-            html.H2('Línea de tiempo'),
-            # contenido
-        ])
+        return linea_de_tiempo_page.layout()
+        # return html.Div([
+        #     html.H2('Línea de tiempo'),
+        #     # contenido
+        # ])
     else:
         return inicio_page.layout()
 
@@ -100,4 +102,5 @@ def display_content(pathname):
 if __name__ == '__main__':
     mediciones_page.register_callbacks(app)
     archivos_page.register_callbacks(app)
+    linea_de_tiempo_page.register_callbacks(app)
     app.run_server(debug=True)
