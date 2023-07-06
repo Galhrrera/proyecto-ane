@@ -38,24 +38,34 @@ def register_callbacks(app):
             dropdown_options = [{'label': 'Todos los archivos', 'value': 'todos'}] + [{'label': f, 'value': f} for f in mediciones_files]
             return html.Div(
                 [
+                    html.P(children=
+                           '''
+                           Aquí podrá descargar todos los archivos con los datos obtenidos durante las
+                           mediciones realizadas en campo
+                           ''', className="archivos_parrafo"),
                     dcc.Dropdown(
                         id="mediciones-dropdown",
                         options=dropdown_options,
                         value='todos'  # Opción por defecto: "Todos los archivos"
                     ),
-                    html.A(html.Button("Descargar", id="mediciones-button"), id="mediciones-link")
+                    html.A(html.Button("Descargar", id="mediciones-button", className="archivos-descargas-btn"), id="mediciones-link")
                 ]
             )
         elif tab == "simulaciones":
             dropdown_options = [{'label': 'Todos los archivos', 'value': 'todos'}] + [{'label': f, 'value': f} for f in simulaciones_files]
             return html.Div(
                 [
+                    html.P(children=
+                           '''
+                           Aquí podrá descargar todos los archivos con los datos obtenidos durante las
+                           simulaciones realizadas en laboratorio
+                           ''', className="archivos_parrafo"),
                     dcc.Dropdown(
                         id="simulaciones-dropdown",
                         options=dropdown_options,
                         value='todos'  # Opción por defecto: "Todos los archivos"
                     ),
-                    html.A(html.Button("Descargar", id="simulaciones-button"), id="simulaciones-link")
+                    html.A(html.Button("Descargar", id="simulaciones-button", className="archivos-descargas-btn"), id="simulaciones-link")
                 ]
             )
 

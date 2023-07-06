@@ -1,0 +1,11 @@
+.archivos_parrafo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+#simulaciones-button {
+    color: black;
+}
