@@ -1,12 +1,15 @@
 from dash.dependencies import Output, Input
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+# import dash_core_components as dcc
+from dash import dcc
+# import dash_html_components as html
+from dash import html
 from pages import mediciones_page
 from pages import inicio_page 
 from pages import informe_tecnico_page
 from pages import informe_legal_page
 from pages import informe_final_page
+from pages import archivos_page
 
 
 external_scripts_dict = [
@@ -83,10 +86,7 @@ def display_content(pathname):
         #     # contenido
         # ])
     elif pathname == '/archivos':
-        return html.Div([
-            html.H2('Archivos'),
-            # contenido
-        ])
+        return archivos_page.layout()
     elif pathname == '/linea-de-tiempo':
         return html.Div([
             html.H2('Línea de tiempo'),
@@ -99,4 +99,5 @@ def display_content(pathname):
 
 if __name__ == '__main__':
     mediciones_page.register_callbacks(app)
+    archivos_page.register_callbacks(app)
     app.run_server(debug=True)
