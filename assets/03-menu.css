@@ -2,7 +2,7 @@
     height: 100px;
     padding-top: 30px;
     font-size: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 0px;
     text-align: center;
     background-color: #5aa0f9;
 }
@@ -53,27 +53,31 @@
 }
 
 .nav-links li:nth-child(1):hover ~ .active{
-    top: 7%;
+    top: 6%;
 }
 
 .nav-links li:nth-child(2):hover ~ .active{
-    top: 22.7%;
+    top: 19.5%;
 }
 
 .nav-links li:nth-child(3):hover ~ .active{
-    top: 38.1%;
+    top: 33%;
 }
 
 .nav-links li:nth-child(4):hover ~ .active{
-    top: 53.6%;
+    top: 46%;
 }
 
 .nav-links li:nth-child(5):hover ~ .active{
-    top: 69%;
+    top: 59.5%;
 }
 
 .nav-links li:nth-child(6):hover ~ .active{
-    top: 84.4%;
+    top: 73%;
+}
+
+.nav-links li:nth-child(7):hover ~ .active{
+    top: 86.5%;
 }
 
 

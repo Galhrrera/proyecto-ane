@@ -6,6 +6,7 @@ from pages import mediciones_page
 from pages import inicio_page 
 from pages import informe_tecnico_page
 from pages import informe_legal_page
+from pages import informe_final_page
 
 
 external_scripts_dict = [
@@ -31,6 +32,7 @@ app.layout = html.Div(className="main-container",
                     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Simulaciones', href='/simulaciones')]),
                     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe técnico', href='/informe-tecnico')]),
                     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe legal', href='/informe-legal')]),
+                    html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe final', href='/informe-final')]),
                     html.Li([html.I(className="fa-solid fa-file"),dcc.Link('Archivos', href='/archivos')]),
                     html.Div(className="active")
                 ], className="nav-links")
@@ -70,6 +72,12 @@ def display_content(pathname):
         # ])
     elif pathname == '/informe-legal':
         return informe_legal_page.layout()
+        # return html.Div([
+        #     html.H2('Informe legal'),
+        #     # contenido
+        # ])
+    elif pathname == '/informe-final':
+        return informe_final_page.layout()
         # return html.Div([
         #     html.H2('Informe legal'),
         #     # contenido
