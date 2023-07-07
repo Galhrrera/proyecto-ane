@@ -1,0 +1,22 @@
+.timeline-slider {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.timeline-content {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    /* font-size: 20px; */
+}
+
+.timeline-content p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.mediciones-titulo-secundario {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
