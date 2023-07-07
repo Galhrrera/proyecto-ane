@@ -18,7 +18,8 @@ def layout():
                 5: 'Fecha 5'
             },
             value=1,
-            className="timeline-slider"
+            className="timeline-slider",
+            # updatemode="mouseup"
         ),
         html.Div(id='timeline-content', className="timeline-content")
     ], className="linea-de-tiempo-container")
@@ -30,6 +31,7 @@ def register_callbacks(app):
     [Input('timeline-slider', 'value')]
     )
     def update_timeline_content(value):
+        value = int(value)
         title = html.H2(f"Opción seleccionada: {value}", className="linea-de-tiempo-titulo-secundario")
         paragraphs = [html.P(f"Párrafo {i+1}") for i in range(value)]
         return [title] + paragraphs
