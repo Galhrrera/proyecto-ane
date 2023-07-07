@@ -48,7 +48,7 @@ def register_callbacks(app):
                         options=dropdown_options,
                         value='todos'  # Opción por defecto: "Todos los archivos"
                     ),
-                    html.A(html.Button("Descargar", id="mediciones-button", className="archivos-descargas-btn"), id="mediciones-link")
+                    html.A(html.Button("Descargar", id="mediciones-button", className="archivos-descargas-btn"), id="mediciones-link", className="archivo-link")
                 ]
             )
         elif tab == "simulaciones":
@@ -65,7 +65,7 @@ def register_callbacks(app):
                         options=dropdown_options,
                         value='todos'  # Opción por defecto: "Todos los archivos"
                     ),
-                    html.A(html.Button("Descargar", id="simulaciones-button", className="archivos-descargas-btn"), id="simulaciones-link")
+                    html.A(html.Button("Descargar", id="simulaciones-button", className="archivos-descargas-btn"), id="simulaciones-link", className="archivo-link")
                 ]
             )
 
