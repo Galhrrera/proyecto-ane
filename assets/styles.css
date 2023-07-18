@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    text-decoration: none;
     /* overflow-x: hidden; */
 }
 
@@ -12,8 +13,119 @@
     display: none !important;
 }
 
+body {
+    margin-left: 80px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 80px;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.icon-menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(10px);
+}
+
+.icon-menu i {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* MENU */
+.menu-container {
+    width: 250px;
+    height: 100%;
+    background: #0072C6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.page-title {
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.page-title i {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.page-title a {
+    color: white;
+    transition: color 300ms;
+}
+
+.page-title a:hover {
+    color: whitesmoke;
+}
+
+.opts-menu {
+    padding: 20px 30px;
+    position: absolute;
+    top: 80px;
+}
+
+.opts-menu a {
+    color: whitesmoke;
+    cursor: default;
+    /*display: block;  CORREGIR */
+    position: relative;
+    transform: all 300ms;
+}
+
+.opts-menu a:hover {
+    color: white;
+    /*BUSCAR COLOR */
+}
+
+.opts-menu .opt {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.opts-menu .opt i {
+    width: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.opts-menu .opt a {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a.selected {
+    color: white;
+}
+
+
+
+
+
+
 /* CONTAINERS */
-.main-container {
+/* .main-container {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -64,10 +176,10 @@
     padding: 30px;
     width: 1560px;
     background-color: #f5f5f5;
-}
+} */
 
 /* SLIDERBAR MENU */
-.menu-container h2 {
+/* .menu-container h2 {
     height: 100px;
     padding-top: 30px;
     font-size: 30px;
@@ -147,17 +259,17 @@
 
 .nav-links li:nth-child(7):hover~.active {
     top: 86.5%;
-}
+} */
 
 /* TEXT */
-.content-title {
+/* .content-title {
     padding-bottom: 30px;
     font-size: 35px;
     color: #333333;
-}
+} */
 
-MEDICIONES
-.mediciones-label {
+/* MEDICIONES */
+/* .mediciones-label {
     font-size: large;
 }
 
@@ -183,10 +295,10 @@ MEDICIONES
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 25px;
-}
+} */
 
 /* INICIO */
-.inicio-container h2 {
+/* .inicio-container h2 {
     text-align: center;
     font-size: 25px;
 }
@@ -221,10 +333,10 @@ MEDICIONES
     padding-top: 5px;
     padding-bottom: 5px;
     text-align: justify;
-}
+} */
 
 /* INFORME TÉCNICO */
-.informe-parrafo {
+/* .informe-parrafo {
     font-size: 20px;
     text-align: justify;
 }
@@ -233,10 +345,10 @@ MEDICIONES
     margin-top: 25px;
     width: 1500px;
     height: 800px;
-}
+} */
 
 /* ARCHIVOS */
-.archivos_parrafo {
+/* .archivos_parrafo {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 15px;
@@ -275,10 +387,10 @@ MEDICIONES
     width: 100%;
     text-decoration: none;
     justify-content: center;
-}
+} */
 
 /* LÍNEA DE TIEMPO */
-.timeline-slider {
+/* .timeline-slider {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -286,7 +398,6 @@ MEDICIONES
 .timeline-content {
     margin-top: 15px;
     margin-bottom: 15px;
-    /* font-size: 20px; */
 }
 
 .timeline-content p {
@@ -299,10 +410,10 @@ MEDICIONES
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 25px;
-}
+} */
 
 /* INFORME LEGAL */
-.informe-parrafo {
+/* .informe-parrafo {
     font-size: 20px;
     text-align: justify;
 }
@@ -311,10 +422,10 @@ MEDICIONES
     margin-top: 25px;
     width: 1500px;
     height: 800px;
-}
+} */
 
 /* INFORME FINAL */
-.informe-parrafo {
+/* .informe-parrafo {
     font-size: 20px;
     text-align: justify;
 }
@@ -323,5 +434,4 @@ MEDICIONES
     margin-top: 25px;
     width: 1500px;
     height: 800px;
-}
-
+} */
