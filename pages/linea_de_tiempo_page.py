@@ -22,7 +22,7 @@ def layout():
             # updatemode="mouseup"
         ),
         html.Div(id='timeline-content', className="timeline-content")
-    ], className="linea-de-tiempo-container")
+    ], className="linea-de-tiempo-container container")
 
 
 def register_callbacks(app):

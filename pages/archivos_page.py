@@ -24,7 +24,7 @@ def layout():
             ], className="archivos-tabs"),
             html.Div(id="tab-content")
         ],
-        className="archivos-container"
+        className="archivos-container container"
     )
 
 

@@ -58,7 +58,7 @@ def layout():
         #     page_size=10,
         #     style_table={"overflowX": "auto"}
         # )
-    ], className="mediciones-container")
+    ], className="mediciones-container container")
 
 
 

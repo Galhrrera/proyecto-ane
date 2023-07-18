@@ -48,7 +48,7 @@ app.layout = html.Div(className="main-container",
             children=[
                 html.H2('Bienvenido'),
                 html.P('Selecciona una opción del menú para ver el contenido correspondiente.')
-            ], className="content-container"
+            ], className="content-container container"
         )
     ]
 )

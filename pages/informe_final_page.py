@@ -27,4 +27,4 @@ def layout():
                 className='informe'
             )
 
-    ], className="informe-container")
+    ], className="informe-container container")

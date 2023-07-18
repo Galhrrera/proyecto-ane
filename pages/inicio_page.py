@@ -48,5 +48,5 @@ def layout():
                 html.Li("Datos: Descarga todos los datos obtenidos en las mediciones y simulaciones para un análisis más profundo.")
             ])
     ], className="inicio-parrafos-container")
-], className="inicio-container")
+], className="inicio-container container")
 
