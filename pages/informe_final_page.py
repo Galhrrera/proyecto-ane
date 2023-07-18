@@ -22,7 +22,7 @@ def layout():
             )
         ], className="informe-parrafo"),
         html.ObjectEl(
-            data="assets\DEMO_informe_final.PDF",
+            data="assets\informe_final.PDF",
                 type="application/pdf",
                 className='informe'
             )
