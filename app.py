@@ -1,8 +1,6 @@
 from dash.dependencies import Output, Input
 import dash
-# import dash_core_components as dcc
 from dash import dcc
-# import dash_html_components as html
 from dash import html
 from pages import mediciones_page
 from pages import inicio_page 
@@ -22,6 +20,7 @@ external_scripts_dict = [
 
 app = dash.Dash(__name__, suppress_callback_exceptions=True, external_scripts=external_scripts_dict)
 
+
 # Definir el estilo CSS para los contenedores principales
 app.layout = html.Div(className="main-container",
     children=[
@@ -30,6 +29,9 @@ app.layout = html.Div(className="main-container",
         html.Div(
             children=[
                 html.H2(dcc.Link('Proyecto ANE', href='/')),
+                html.Div(children=[
+                    html.Div(className="hamburguer")
+                ],className="menu-toggle"),
                 html.Ul([
                     html.Li([html.I(className="fa-solid fa-timeline"),dcc.Link('Línea de tiempo', href='/linea-de-tiempo')]),
                     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Mediciones', href='/mediciones')]),
@@ -39,7 +41,7 @@ app.layout = html.Div(className="main-container",
                     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe final', href='/informe-final')]),
                     html.Li([html.I(className="fa-solid fa-file"),dcc.Link('Archivos', href='/archivos')]),
                     html.Div(className="active")
-                ], className="nav-links")
+                ], className="nav-links menu")
             ], className="menu-container"
         ),
         # Contenido dinámico
@@ -55,7 +57,6 @@ app.layout = html.Div(className="main-container",
 
 app._favicon = ("assets\favicon.ico")
 
-
 @app.callback(
     Output('content', 'children'),
     [Input('url', 'pathname')]
@@ -66,34 +67,17 @@ def display_content(pathname):
     elif pathname == '/simulaciones':
         return html.Div([
             html.H2('Simulaciones'),
-            # contenido
         ])
     elif pathname == '/informe-tecnico':
         return informe_tecnico_page.layout()
-        # return html.Div([
-        #     html.H2('Informe técnico'),
-        #     # contenido
-        # ])
     elif pathname == '/informe-legal':
         return informe_legal_page.layout()
-        # return html.Div([
-        #     html.H2('Informe legal'),
-        #     # contenido
-        # ])
     elif pathname == '/informe-final':
         return informe_final_page.layout()
-        # return html.Div([
-        #     html.H2('Informe legal'),
-        #     # contenido
-        # ])
     elif pathname == '/archivos':
         return archivos_page.layout()
     elif pathname == '/linea-de-tiempo':
         return linea_de_tiempo_page.layout()
-        # return html.Div([
-        #     html.H2('Línea de tiempo'),
-        #     # contenido
-        # ])
     else:
         return inicio_page.layout()
 
@@ -104,3 +88,6 @@ if __name__ == '__main__':
     archivos_page.register_callbacks(app)
     linea_de_tiempo_page.register_callbacks(app)
     app.run_server(debug=True)
+
+
+

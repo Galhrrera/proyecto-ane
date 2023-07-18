@@ -15,7 +15,7 @@
 /* CONTAINERS */
 .main-container {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     height: 100vh;
     width: 100vw;
 }
@@ -67,7 +67,7 @@
 }
 
 /* SLIDERBAR MENU */
-.menu-container h2{
+.menu-container h2 {
     height: 100px;
     padding-top: 30px;
     font-size: 30px;
@@ -76,24 +76,24 @@
     background-color: #5aa0f9;
 }
 
-.menu-container h2 a{
+.menu-container h2 a {
     color: white;
     text-decoration: none;
 }
 
-.nav-links{
+.nav-links {
     list-style: none;
     position: relative;
     padding: 20px;
 }
 
-.nav-links li{
+.nav-links li {
     padding: 20px 0;
     display: flex;
     align-items: center;
 }
 
-.nav-links li a{
+.nav-links li a {
     color: white;
     text-decoration: none;
     padding: 10px 14px;
@@ -101,7 +101,7 @@
     display: flex;
 }
 
-.nav-links li i{
+.nav-links li i {
     font-size: 25px;
     color: white;
     margin-right: 20px;
@@ -117,35 +117,35 @@
     display: none;
 }
 
-.nav-links li:hover ~ .active{
+.nav-links li:hover~.active {
     display: block;
 }
 
-.nav-links li:nth-child(1):hover ~ .active{
+.nav-links li:nth-child(1):hover~.active {
     top: 6%;
 }
 
-.nav-links li:nth-child(2):hover ~ .active{
+.nav-links li:nth-child(2):hover~.active {
     top: 19.5%;
 }
 
-.nav-links li:nth-child(3):hover ~ .active{
+.nav-links li:nth-child(3):hover~.active {
     top: 33%;
 }
 
-.nav-links li:nth-child(4):hover ~ .active{
+.nav-links li:nth-child(4):hover~.active {
     top: 46%;
 }
 
-.nav-links li:nth-child(5):hover ~ .active{
+.nav-links li:nth-child(5):hover~.active {
     top: 59.5%;
 }
 
-.nav-links li:nth-child(6):hover ~ .active{
+.nav-links li:nth-child(6):hover~.active {
     top: 73%;
 }
 
-.nav-links li:nth-child(7):hover ~ .active{
+.nav-links li:nth-child(7):hover~.active {
     top: 86.5%;
 }
 
@@ -156,7 +156,7 @@
     color: #333333;
 }
 
-/* MEDICIONES */
+MEDICIONES
 .mediciones-label {
     font-size: large;
 }
@@ -174,7 +174,7 @@
     margin-bottom: 15px;
 }
 
-.mediciones-parrafo p{
+.mediciones-parrafo p {
     font-size: 20px;
     text-align: justify;
 }
@@ -186,7 +186,7 @@
 }
 
 /* INICIO */
-.inicio-container h2{
+.inicio-container h2 {
     text-align: center;
     font-size: 25px;
 }
@@ -209,13 +209,13 @@
     text-align: justify;
 }
 
-.inicio-parrafos-container h3{
+.inicio-parrafos-container h3 {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 25px;
 }
 
-.inicio-parrafos-container ul li{
+.inicio-parrafos-container ul li {
     font-size: 20px;
     list-style-type: square;
     padding-top: 5px;
@@ -229,7 +229,7 @@
     text-align: justify;
 }
 
-.informe{
+.informe {
     margin-top: 25px;
     width: 1500px;
     height: 800px;
@@ -289,7 +289,7 @@
     /* font-size: 20px; */
 }
 
-.timeline-content p{
+.timeline-content p {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 20px;
@@ -307,7 +307,7 @@
     text-align: justify;
 }
 
-.informe{
+.informe {
     margin-top: 25px;
     width: 1500px;
     height: 800px;
@@ -319,8 +319,9 @@
     text-align: justify;
 }
 
-.informe{
+.informe {
     margin-top: 25px;
     width: 1500px;
     height: 800px;
 }
+
