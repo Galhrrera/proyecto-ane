@@ -13,8 +13,12 @@
     display: none !important;
 }
 
-body {
+/* body {
     margin-left: 80px;
+} */
+.main-container {
+    margin-left: 80px;
+    transition: margin-left 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 /* HEADER */
@@ -46,22 +50,39 @@ header {
 
 /* MENU */
 .menu-container {
-    width: 250px;
+    width: 80px;
     height: 100%;
     background: #0072C6;
     position: fixed;
     top: 0;
     left: 0;
-    color: white;
     font-size: 18px;
     z-index: 1000;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-right: 20px solid #0072C6;
+    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.menu-container::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .page-title {
     padding: 20px 30px;
-    display: flex;
     align-items: center;
     margin-top: 10px;
+}
+
+.page-title a {
+    display: flex;
+    color: #ffffffb2;
+    transition: all 300ms;
 }
 
 .page-title i {
@@ -69,13 +90,8 @@ header {
     margin-right: 20px;
 }
 
-.page-title a {
-    color: white;
-    transition: color 300ms;
-}
-
 .page-title a:hover {
-    color: whitesmoke;
+    color: white;
 }
 
 .opts-menu {
@@ -85,11 +101,11 @@ header {
 }
 
 .opts-menu a {
-    color: whitesmoke;
+    color: #ffffffb2;
     cursor: default;
-    /*display: block;  CORREGIR */
+    display: block;
     position: relative;
-    transform: all 300ms;
+    transform: color 300ms;
 }
 
 .opts-menu a:hover {
@@ -110,13 +126,32 @@ header {
     cursor: pointer;
 }
 
-.opts-menu .opt a {
+.opts-menu .opt h4 {
     font-weight: 300;
     cursor: pointer;
 }
 
 a.selected {
     color: white;
+}
+
+.selected:before {
+    content: '';
+    width: 3px;
+    height: 80%;
+    background: white;
+    position: absolute;
+    top: 10%;
+    left: -30px;
+}
+
+/* clases para js */
+.body-moved {
+    margin-left: 250px;
+}
+
+.menu-container-moved {
+    width: 250px;
 }
 
 

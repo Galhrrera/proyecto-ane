@@ -1,4 +1,4 @@
-from dash.dependencies import Output, Input
+from dash.dependencies import Output, Input, State
 import dash
 from dash import dcc
 from dash import html
@@ -21,13 +21,12 @@ external_scripts_dict = [
 app = dash.Dash(__name__, suppress_callback_exceptions=True,
                 external_scripts=external_scripts_dict)
 
-
 # Definir el estilo CSS para los contenedores principales
-app.layout = html.Div(className="main-container",
+app.layout = html.Div(className="main-container", id="my-body",
                       children=[
                           dcc.Location(id='url', refresh=False),
                           html.Header(
-                              html.Div(html.I(className="fa-solid fa-bars"),
+                              html.Div(html.I(className="fa-solid fa-bars", id="btn-open-close"),
                                        className="icon-menu")
                           ),
                           # Menú
@@ -35,73 +34,68 @@ app.layout = html.Div(className="main-container",
                               children=[
                                   html.Div(
                                       [
-                                          html.I(
-                                              className="fa-solid fa-house"),
-                                          html.H3(
-                                              dcc.Link('Proyecto ANE', href='/'))
+                                          html.A(href='/', children=[
+                                              html.I(
+                                                  className="fa-solid fa-house"),
+                                              html.H3(children="Proyecto ANE")
+                                          ])
                                       ],
                                       className="page-title"
                                   ),
                                   html.Div([
                                       html.A(href='/linea-de-tiempo', className="selected", children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-timeline", title="Línea de tiempo"),
+                                              html.I(
+                                                  className="fa-solid fa-timeline", title="Línea de tiempo"),
                                               html.H4("Línea de tiempo")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/mediciones', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-chart-line", title="Mediciones"),
+                                              html.I(
+                                                  className="fa-solid fa-chart-line", title="Mediciones"),
                                               html.H4("Mediciones")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/simulaciones', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-chart-line", title="Simulaciones"),
+                                              html.I(
+                                                  className="fa-solid fa-chart-line", title="Simulaciones"),
                                               html.H4("Simulaciones")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/informe-tecnico', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-file-pdf", title="Informe técnico"),
+                                              html.I(
+                                                  className="fa-solid fa-file-pdf", title="Informe técnico"),
                                               html.H4("Informe técnico")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/informe-legal', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-file-pdf", title="Informe legal"),
+                                              html.I(
+                                                  className="fa-solid fa-file-pdf", title="Informe legal"),
                                               html.H4("Informe legal")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/informe-final', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-file-pdf", title="Informe final"),
+                                              html.I(
+                                                  className="fa-solid fa-file-pdf", title="Informe final"),
                                               html.H4("Informe final")
                                           ], className="opt")
                                       ]),
                                       html.A(href='/archivos', children=[
                                           html.Div([
-                                              html.I(className="fa-solid fa-file", title="Archivos"),
+                                              html.I(
+                                                  className="fa-solid fa-file", title="Archivos"),
                                               html.H4("Archivos")
                                           ], className="opt")
                                       ]),
                                   ],
                                       className="opts-menu"
                                   )
-                                  # html.Div(children=[
-                                  #     html.Div(className="hamburguer")
-                                  # ],className="menu-toggle"),
-                                  # html.Ul([
-                                  #     html.Li([html.I(className="fa-solid fa-timeline"),dcc.Link('Línea de tiempo', href='/linea-de-tiempo')]),
-                                  #     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Mediciones', href='/mediciones')]),
-                                  #     html.Li([html.I(className="fa-solid fa-chart-line"),dcc.Link('Simulaciones', href='/simulaciones')]),
-                                  #     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe técnico', href='/informe-tecnico')]),
-                                  #     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe legal', href='/informe-legal')]),
-                                  #     html.Li([html.I(className="fa-solid fa-file-pdf"),dcc.Link('Informe final', href='/informe-final')]),
-                                  #     html.Li([html.I(className="fa-solid fa-file"),dcc.Link('Archivos', href='/archivos')]),
-                                  #     html.Div(className="active")
-                                  # ], className="nav-links menu")
-                              ], className="menu-container"
+                              ], className="menu-container", id="menu-container"
                           ),
                           # Contenido dinámico
                           html.Div(
@@ -141,6 +135,27 @@ def display_content(pathname):
         return linea_de_tiempo_page.layout()
     else:
         return inicio_page.layout()
+
+
+@app.callback(
+    Output('menu-container', 'className'),
+    Output('my-body', 'className'),
+    Input('btn-open-close', 'n_clicks'),
+    State('menu-container', 'className'),
+    State('my-body', 'className')
+)
+def update_classnames(n_clicks, menu_container_classname, body_classname):
+    if 'menu-container-moved' in menu_container_classname:
+        menu_container_classname = menu_container_classname.replace('menu-container-moved', '')
+    else:
+        menu_container_classname += ' menu-container-moved'
+
+    if 'body-moved' in body_classname:
+        body_classname = body_classname.replace('body-moved', '')
+    else:
+        body_classname += ' body-moved'
+
+    return menu_container_classname, body_classname
 
 
 if __name__ == '__main__':
