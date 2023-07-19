@@ -43,34 +43,48 @@ app.layout = html.Div(className="main-container",
                                       className="page-title"
                                   ),
                                   html.Div([
-                                      html.Li([html.Div([
-                                          html.I(className="fa-solid fa-timeline", title="Línea de tiempo"), dcc.Link(
-                                              'Línea de tiempo', href='/linea-de-tiempo')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(
-                                              className="fa-solid fa-chart-line", title="Mediciones"), dcc.Link('Mediciones', href='/mediciones')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(
-                                              className="fa-solid fa-chart-line", title="Simulaciones"), dcc.Link('Simulaciones', href='/simulaciones')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(className="fa-solid fa-file-pdf", title="Informe Técnico"), dcc.Link(
-                                              'Informe técnico', href='/informe-tecnico')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(
-                                              className="fa-solid fa-file-pdf", title="Informe Legal"), dcc.Link('Informe legal', href='/informe-legal')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(
-                                              className="fa-solid fa-file-pdf", title="Informe Final"), dcc.Link('Informe final', href='/informe-final')
-                                      ])], className="opt"),
-                                      html.Li([html.Div([
-                                          html.I(
-                                              className="fa-solid fa-file", title="Archivos"), dcc.Link('Archivos', href='/archivos')
-                                      ])], className="opt"),
+                                      html.A(href='/linea-de-tiempo', className="selected", children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-timeline", title="Línea de tiempo"),
+                                              html.H4("Línea de tiempo")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/mediciones', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-chart-line", title="Mediciones"),
+                                              html.H4("Mediciones")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/simulaciones', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-chart-line", title="Simulaciones"),
+                                              html.H4("Simulaciones")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/informe-tecnico', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-file-pdf", title="Informe técnico"),
+                                              html.H4("Informe técnico")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/informe-legal', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-file-pdf", title="Informe legal"),
+                                              html.H4("Informe legal")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/informe-final', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-file-pdf", title="Informe final"),
+                                              html.H4("Informe final")
+                                          ], className="opt")
+                                      ]),
+                                      html.A(href='/archivos', children=[
+                                          html.Div([
+                                              html.I(className="fa-solid fa-file", title="Archivos"),
+                                              html.H4("Archivos")
+                                          ], className="opt")
+                                      ]),
                                   ],
                                       className="opts-menu"
                                   )
