@@ -26,8 +26,11 @@ app.layout = html.Div(className="main-container", id="my-body",
                       children=[
                           dcc.Location(id='url', refresh=False),
                           html.Header(
-                              html.Div(html.I(className="fa-solid fa-bars", id="btn-open-close"),
-                                       className="icon-menu")
+                              html.Div([
+                                  html.I(className="fa-solid fa-bars",
+                                         id="btn-open-close"),
+                                  html.H3("Proyecto ANE")],
+                                  className="icon-menu")
                           ),
                           # Menú
                           html.Div(
@@ -37,7 +40,7 @@ app.layout = html.Div(className="main-container", id="my-body",
                                           html.A(href='/', children=[
                                               html.I(
                                                   className="fa-solid fa-house"),
-                                              html.H3(children="Proyecto ANE")
+                                              html.H3(children="Inicio")
                                           ])
                                       ],
                                       className="page-title"
@@ -146,7 +149,8 @@ def display_content(pathname):
 )
 def update_classnames(n_clicks, menu_container_classname, body_classname):
     if 'menu-container-moved' in menu_container_classname:
-        menu_container_classname = menu_container_classname.replace('menu-container-moved', '')
+        menu_container_classname = menu_container_classname.replace(
+            'menu-container-moved', '')
     else:
         menu_container_classname += ' menu-container-moved'
 
