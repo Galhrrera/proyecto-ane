@@ -5,7 +5,7 @@ from dash import html
 
 def layout():
     return html.Div([
-        html.H1("Línea de tiempo"),
+        html.H2("LÍNEA DE TIEMPO"),
         dcc.Slider(
             id='timeline-slider',
             min=1,
@@ -32,6 +32,6 @@ def register_callbacks(app):
     )
     def update_timeline_content(value):
         value = int(value)
-        title = html.H2(f"Opción seleccionada: {value}", className="linea-de-tiempo-titulo-secundario")
+        title = html.H3(f"Opción seleccionada: {value}", className="linea-de-tiempo-titulo-secundario")
         paragraphs = [html.P(f"Párrafo {i+1}") for i in range(value)]
         return [title] + paragraphs

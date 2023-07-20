@@ -219,6 +219,47 @@ header {
     text-align: justify;
 }
 
+/* linea del tiempo */
+.linea-de-tiempo-container {
+    padding-top: 45px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+}
+
+.linea-de-tiempo-container h2{
+    font-size: 25px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
+    /* color */
+}
+
+.linea-de-tiempo-container h3{
+    font-size: 25px;
+    /* color */
+}
+
+/* .timeline-slider {
+} */
+
+.timeline-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-content p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.linea-de-tiempo-titulo-secundario {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 760px) {
     .body-moved {
