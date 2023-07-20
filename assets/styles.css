@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: sans-serif;
     text-decoration: none;
-    /* overflow-x: hidden; */
 }
 
 .dash-debug-menu__outer,
@@ -13,9 +12,6 @@
     display: none !important;
 }
 
-/* body {
-    margin-left: 80px;
-} */
 .main-container {
     margin-left: 80px;
     transition: margin-left 350ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -141,20 +137,6 @@ header {
     cursor: pointer;
 }
 
-/* a.selected {
-    color: white;
-}
-
-.selected:before {
-    content: '';
-    width: 3px;
-    height: 80%;
-    background: white;
-    position: absolute;
-    top: 10%;
-    left: -30px;
-} */
-
 /* clases para js */
 .body-moved {
     margin-left: 250px;
@@ -241,9 +223,6 @@ header {
     /* color */
 }
 
-/* .timeline-slider {
-} */
-
 .timeline-content {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -276,7 +255,6 @@ header {
 }
 
 .dash-graph {
-    /* height: 735px; */
     width: 100%;
     height: 100%;
 }
@@ -322,135 +300,17 @@ header {
     height: 850px;
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width: 760px) {
-    .body-moved {
-        margin-left: 0px;
-    }
-
-    .menu-container-moved {
-        width: 80px;
-        left: -80px;
-    }
-
-    .dash-graph {
-        width: 100%;
-        height: 300px;
-    }
-
-    /* .groups {
-        display: none;
-    } */
-}
-
-
-
-
-
-
-/* .main-container {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100vw;
-}
-
-.menu-container {
-    background: #0072C6;
-    position: fixed;
-    height: 100%;
-    width: 300px;
-    top: 0;
-    left: 0;
-    z-index: 999;
-}
-
-.content-container {
-    width: 100%;
-    margin-left: 300px;
-    background-color: #f5f5f5;
-}
-
-.mediciones-container {
-    padding: 30px;
-    width: 1560px;
-    background-color: #f5f5f5;
-}
-
-.inicio-container {
-    padding: 30px;
-    width: 1560px;
-    background-color: #f5f5f5;
-}
-
-.informe-container {
-    padding: 30px;
-    width: 1560px;
-    background-color: #f5f5f5;
-}
-
+/* archivos */
 .archivos-container {
     padding: 30px;
-    width: 1560px;
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
 }
 
-.linea-de-tiempo-container {
-    padding: 30px;
-    width: 1560px;
-    background-color: #f5f5f5;
-} */
-
-
-/* TEXT */
-
-
-/* MEDICIONES */
-/* .mediciones-label {
-    font-size: large;
-}
-
-.dash-graph {
-    height: 735px;
-}
-
-.dash-dropdown {
-    padding-bottom: 15px;
-}
-
-.mediciones-parrafo {
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-.mediciones-parrafo p {
-    font-size: 20px;
-    text-align: justify;
-}
-
-.mediciones-titulo-secundario {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.archivos-container h2{
     font-size: 25px;
-} */
-
-/* INICIO */
-
-
-/* INFORME TÉCNICO */
-/* .informe-parrafo {
-    font-size: 20px;
-    text-align: justify;
 }
 
-.informe {
-    margin-top: 25px;
-    width: 1500px;
-    height: 800px;
-} */
-
-/* ARCHIVOS */
-/* .archivos_parrafo {
+.archivos_parrafo {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 15px;
@@ -489,51 +349,26 @@ header {
     width: 100%;
     text-decoration: none;
     justify-content: center;
-} */
-
-/* LÍNEA DE TIEMPO */
-/* .timeline-slider {
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
-.timeline-content {
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 760px) {
+    .body-moved {
+        margin-left: 0px;
+    }
+
+    .menu-container-moved {
+        width: 80px;
+        left: -80px;
+    }
+
+    .dash-graph {
+        width: 100%;
+        height: 300px;
+    }
+    /* .groups {
+        display: none;
+    } */
 }
-
-.timeline-content p {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.mediciones-titulo-secundario {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 25px;
-} */
-
-/* INFORME LEGAL */
-/* .informe-parrafo {
-    font-size: 20px;
-    text-align: justify;
-}
-
-.informe {
-    margin-top: 25px;
-    width: 1500px;
-    height: 800px;
-} */
-
-/* INFORME FINAL */
-/* .informe-parrafo {
-    font-size: 20px;
-    text-align: justify;
-}
-
-.informe {
-    margin-top: 25px;
-    width: 1500px;
-    height: 800px;
-} */

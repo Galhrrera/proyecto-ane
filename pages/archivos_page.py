@@ -17,7 +17,7 @@ simulaciones_files = os.listdir(simulaciones_folder)
 def layout():
     return html.Div(
         [
-            html.H2('Archivos', className="content-title"),
+            html.H2('ARCHIVOS', className="content-title"),
             dcc.Tabs(id="tabs", value="mediciones", children=[
                 dcc.Tab(label="Mediciones", value="mediciones"),
                 dcc.Tab(label="Simulaciones", value="simulaciones")
