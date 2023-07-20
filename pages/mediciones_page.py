@@ -13,7 +13,7 @@ df = pd.read_csv('datosCompletos.csv')
 
 def layout():
     return html.Div([
-        html.H2('Mediciones', className="content-title"),
+        html.H2('MEDICIONES', className="content-title"),
         html.Div([
             html.P(
         '''
