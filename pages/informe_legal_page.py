@@ -9,7 +9,7 @@ import plotly.graph_objs as go
 
 def layout():
     return html.Div([
-        html.H2('Informe Legal', className="content-title"),
+        html.H2('INFORME LEGAL', className="content-title"),
         html.Div([
             html.P(
         '''
