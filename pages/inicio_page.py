@@ -1,14 +1,8 @@
 import dash
-# import dash_core_components as dcc
 from dash import dcc
-# import dash_html_components as html
 from dash import html
 import pandas as pd
 import plotly.graph_objs as go
-#from app import app
-
-# Cargar los datos desde el archivo CSV
-#df = pd.read_csv('datosCompletos.csv')
 
 def layout():
     return html.Div([

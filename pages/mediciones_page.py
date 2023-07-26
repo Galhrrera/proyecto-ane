@@ -1,7 +1,5 @@
 import dash
-# import dash_core_components as dcc
 from dash import dcc
-# import dash_html_components as html
 from dash import html
 import pandas as pd
 import plotly.graph_objs as go
@@ -52,12 +50,6 @@ def layout():
             page_size=10,
             style_table={"overflowX": "auto"}
         )
-        # dash_table.DataTable(
-        #     df.to_dict("records"),
-        #     [{"name": i, "id": i} for i in df.columns],
-        #     page_size=10,
-        #     style_table={"overflowX": "auto"}
-        # )
     ], className="mediciones-container container")
 
 
@@ -115,24 +107,7 @@ def register_callbacks(app):
             ]
         )
         return {'data': traces, 'layout': layout}
-    
-    # @app.callback(
-    #     dash.dependencies.Output("tabla-datos", "children"),
-    #     [dash.dependencies.Input("n-medicion-dropdown", "value")]
-    # )
-    # def update_table(selected_mediciones):
-    #     filtered_df = df[df['N medición'].isin(selected_mediciones)]
-    
-    #     tabla = html.Table([
-    #         html.Thead(html.Tr([html.Th(col) for col in filtered_df.columns])),
-    #         html.Tbody([
-    #             html.Tr([
-    #                 html.Td(filtered_df.iloc[i][col]) for col in filtered_df.columns
-    #             ]) for i in range(len(filtered_df))
-    #         ])
-    #     ])
-     
-    #     return tabla
+
     @app.callback(
         dash.dependencies.Output('tabla', 'data'),
         [dash.dependencies.Input('n-medicion-dropdown', 'value')]
